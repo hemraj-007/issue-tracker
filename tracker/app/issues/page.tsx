@@ -1,13 +1,14 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
-import { usePathname } from 'next/navigation'
+import { usePathname, useRouter } from 'next/navigation'
 import { Button } from '@radix-ui/themes'
 
 const IssuesPage = () => {
+  const router = useRouter();
   return (
     <div>
-      <Button>New issue</Button>
+      <Button onClick={() => router.push('/issues/new')}>New issue</Button>
     </div>
   )
 }
